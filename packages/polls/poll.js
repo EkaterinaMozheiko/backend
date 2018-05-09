@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const db = require('../db/db');
-const { validate } = require('jsonschema');
+/* const { validate } = require('jsonschema'); */
 
 /* const newPoll = text => ({
   id: String(Math.random()
