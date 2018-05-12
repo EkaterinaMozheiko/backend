@@ -1,0 +1,32 @@
+{
+  "polls": [
+    {
+      "id": "e69fcfb925bbf",
+      "title": "What is your favorite movie of the year?",
+      "options": [
+        "Shape of water",
+        "Three Billboards Outside Ebbing, Missouri",
+        "Dunkirk"
+      ]
+    },
+    {
+      "id": "2d797f16a9462",
+      "title": "What is your favorite JS framework?",
+      "options": [
+        "Angular",
+        "React",
+        "Vue.js"
+      ]
+    },
+    {
+      "id": "ccca785f1b6c2",
+      "title": "What is your favorite dish?",
+      "options": [
+        "Pizza",
+        "Pasta",
+        "Hamburger"
+      ]
+    }
+  ],
+  "tasks": []
+}

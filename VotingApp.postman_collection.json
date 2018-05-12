@@ -1,0 +1,89 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Voting Application",
+		"_postman_id": "c4f772b8-a601-4280-d424-0be587137ff6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "polls",
+			"request": {
+				"url": "http://localhost:3000/api/v001/polls",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "polls/id",
+			"request": {
+				"url": "http://localhost:3000/api/v001/polls/{{id}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "polls/add",
+			"request": {
+				"url": "http://localhost:3000/api/v001/polls",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"What is your favorite...?\", \n\t\"options\": [ \n\t ] \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "polls/id/delete",
+			"request": {
+				"url": "http://localhost:3000/api/v001/polls/{{id}}",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "bad_request",
+			"request": {
+				"url": "http://localhost:3000/api/v001/polls/{{id}}/delete",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+}
