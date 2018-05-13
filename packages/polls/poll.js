@@ -2,28 +2,15 @@ const router = require('express').Router();
 const db = require('../db/db');
 /* const { validate } = require('jsonschema'); */
 
-/* const newPoll = text => ({
-  id: String(Math.random()
-    .toString(16)
-    .split('.')[1]),
-  title: {
+router.use('/:id', (req, res, next) => {
+  const poll = db.get('polls')
+    .find({ id: req.params.id })
+    .value();
 
-  },
-  votes: {
-    type: Number,
-    default: 0,
-  },
+  if (!poll) {
+    next(new Error('CAN_NOT_FIND_POLL'));
+  }
 });
-*/
-// router.use('/:id', (req, res, next) => {
-//   const poll = db.get('polls')
-//     .find({ id: req.params.id })
-//     .value();
-//
-//   if (!poll) {
-//     next(new Error('CAN_NOT_FIND_POLL'));
-//   }
-// });
 
 // GET /polls
 router.get('/', (req, res) => {
@@ -43,7 +30,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /polls
-router.post('/', (req, res, next) => {
+router.post('/', (req, res) => {
   const poll = {
     id: String(Math.random()
       .toString(16)
