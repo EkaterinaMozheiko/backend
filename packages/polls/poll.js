@@ -9,6 +9,8 @@ router.use('/:id', (req, res, next) => {
 
   if (!poll) {
     next(new Error('CAN_NOT_FIND_POLL'));
+  } else {
+    next();
   }
 });
 
@@ -25,7 +27,7 @@ router.get('/:id', (req, res) => {
     .get('polls')
     .find({ id: req.params.id })
     .value();
-
+  console.log(poll);
   res.json({ status: 'OK', data: poll });
 });
 
@@ -38,7 +40,7 @@ router.post('/', (req, res) => {
     title: req.body.title,
     options: req.body.options,
   };
-  console.log(poll);
+
   db
     .get('polls')
     .push(poll)
@@ -46,20 +48,23 @@ router.post('/', (req, res) => {
 
   res.json({ status: 'OK', data: poll });
 });
-/*
-// PATCH /polls/:id
-router.patch('/:id', (req, res, next) => {
-  const poll = db
-    .get('polls')
+
+// PATCH /polls/:id/votes/:index
+router.patch('/:id/votes/:index', (req, res) => {
+  console.log(req.params.index);
+  const poll = db.get('polls')
     .find({ id: req.params.id })
-    .assign(req.body)
+    .get('options')
+    .find({ index: req.params.index })
+    .update('votes', n => n + 1)
     .value();
 
   db.write();
 
   res.json({ status: 'OK', data: poll });
 });
-*/
+
+
 // DELETE /polls/:id
 router.delete('/:id', (req, res) => {
   db
