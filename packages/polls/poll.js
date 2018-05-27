@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const db = require('../db/db');
-/* const { validate } = require('jsonschema'); */
 
 router.use('/:id', (req, res, next) => {
   const poll = db.get('polls')
@@ -17,7 +16,6 @@ router.use('/:id', (req, res, next) => {
 // GET /polls
 router.get('/', (req, res) => {
   const polls = db.get('polls').value();
-
   res.json({ status: 'OK', data: polls });
 });
 
@@ -27,7 +25,7 @@ router.get('/:id', (req, res) => {
     .get('polls')
     .find({ id: req.params.id })
     .value();
-  console.log(poll);
+
   res.json({ status: 'OK', data: poll });
 });
 
@@ -41,8 +39,7 @@ router.post('/', (req, res) => {
     options: req.body.options,
   };
 
-  db
-    .get('polls')
+  db.get('polls')
     .push(poll)
     .write();
 

@@ -4,7 +4,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const error = require('../error/error');
 const pollsRoutes = require('../polls/poll');
-// const router = express.Router;
 const app = express();
 
 app.use(logger('dev'));
@@ -26,17 +25,9 @@ app.use((req, res) => {
   res.json({ status: 'BAD_REQUEST', messages: [error({ code: 'BAD_REQUEST' })] });
 });
 
-// eslint-disable-next-line no-unused-vars
 app.use((err, req, res) => {
   res.json({ status: 'FAIL', messages: [error({ code: err.message })] });
 });
 
-/*
-// router
-router.use((req, res, next) => {
-  setTimeout(next, 300);
-
-}
-); */
-
 module.exports = app;
+

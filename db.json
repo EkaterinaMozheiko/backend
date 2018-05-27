@@ -1,144 +1,49 @@
 {
   "polls": [
     {
-      "id": "2ba9c9950e32f",
-      "title": "Which is your favorite hot drink?",
+      "id": "e0bb420c6dfa2",
+      "title": "What is your favorite way to travel somewhere?",
       "options": [
         {
           "index": "1",
-          "option": "Tea",
-          "votes": 4
-        },
-        {
-          "index": "2",
-          "option": "Coffee",
-          "votes": 8
-        },
-        {
-          "index": "3",
-          "option": "Hot Chocolate",
-          "votes": 13
-        }
-      ]
-    },
-    {
-      "id": "b6d5938c7b569",
-      "title": "When people give you advice, do you usually take it?",
-      "options": [
-        {
-          "index": "1",
-          "option": "Depends (be more specific)",
-          "votes": 1
-        },
-        {
-          "index": "2",
-          "option": "Yes",
-          "votes": 0
-        },
-        {
-          "index": "3",
-          "option": "No",
-          "votes": 0
-        }
-      ]
-    },
-    {
-      "id": "7084e27b75a3d",
-      "title": "Have you ever seen a tornado?",
-      "options": [
-        {
-          "index": "1",
-          "option": "Yes",
-          "votes": 1
-        },
-        {
-          "index": "2",
-          "option": "No",
-          "votes": 1
-        }
-      ]
-    },
-    {
-      "id": "1bb259354e875",
-      "title": "How much pizza do you eat in one sitting?",
-      "options": [
-        {
-          "index": "1",
-          "option": "1 piece",
+          "option": "Train",
           "votes": 2
         },
         {
           "index": "2",
-          "option": "2 pieces",
-          "votes": 6
+          "option": "Boat",
+          "votes": 0
         },
         {
           "index": "3",
-          "option": "3 pieces",
+          "option": "Plane",
           "votes": 0
         },
         {
           "index": "4",
-          "option": "Entire pizza",
+          "option": "Car",
           "votes": 1
         },
         {
           "index": "5",
-          "option": "I don't eat pizza",
-          "votes": 3
-        }
-      ]
-    },
-    {
-      "id": "65cb68760baf6",
-      "title": "You can only have two out of the three: Beauty, Money, Intelligence.",
-      "options": [
-        {
-          "index": "1",
-          "option": "Beauty and Money",
-          "votes": 0
-        },
-        {
-          "index": "2",
-          "option": "Beauty and Intelligence",
-          "votes": 0
-        },
-        {
-          "index": "3",
-          "option": "Money and Intelligence",
-          "votes": 0
-        }
-      ]
-    },
-    {
-      "id": "c7b33f29c0f62",
-      "title": "Would you rather become a bird or a fish?",
-      "options": [
-        {
-          "index": "1",
-          "option": "Bird",
+          "option": "Walk",
           "votes": 4
-        },
-        {
-          "index": "2",
-          "option": "Fish",
-          "votes": 5
         }
       ]
     },
     {
-      "id": "d5a6697cb68a2",
-      "title": "aaaaa",
+      "id": "95066b9b9a65c",
+      "title": "Are you an introvert or an extrovert?",
       "options": [
         {
           "index": "1",
-          "option": "sadsad",
-          "votes": 2
+          "option": "Introvert",
+          "votes": 0
         },
         {
           "index": "2",
-          "option": "sdasda",
-          "votes": 4
+          "option": "Extrovert",
+          "votes": 0
         }
       ]
     }
